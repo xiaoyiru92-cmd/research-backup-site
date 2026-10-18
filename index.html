@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="PSFC Research Backup — a personally operated research backup utility. Informational site only.">
+<title>PSFC Research Backup — Research Backup Utility</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --card:#ffffff; --ink:#1c2330; --muted:#5b6575;
+    --line:#e3e8ef; --accent:#1a56db; --accent-soft:#eaf0fe;
+    --warn-bg:#fff8e6; --warn-line:#ecd9a0; --radius:14px;
+    --max:860px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;font-size:16px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:32px 20px 64px}
+  header.card,main.card,footer.card{background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:28px;box-shadow:0 1px 4px rgba(20,30,50,.05)}
+  header.card{margin-bottom:18px}
+  main.card{margin-bottom:18px}
+  .eyebrow{display:inline-block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--accent);background:var(--accent-soft);border:1px solid #cddcfa;
+    padding:4px 10px;border-radius:999px;margin-bottom:12px}
+  h1{margin:.15em 0 .3em;font-size:clamp(26px,4vw,36px);line-height:1.2}
+  h2{font-size:20px;margin:28px 0 10px;padding-top:18px;border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:none;padding-top:0;margin-top:6px}
+  p{margin:10px 0}
+  .muted{color:var(--muted)}
+  .notice{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:10px;
+    padding:14px 16px;margin:16px 0;font-size:15px}
+  ul{margin:8px 0 8px 20px;padding:0}
+  li{margin:6px 0}
+  code{background:#f1f4f8;border:1px solid var(--line);border-radius:6px;
+    padding:1px 6px;font-size:14.5px}
+  .grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+  .tile{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:#fbfcfe}
+  .tile strong{display:block;margin-bottom:4px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  nav.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .btn{display:inline-block;border:1px solid var(--accent);border-radius:999px;
+    padding:9px 18px;font-weight:600}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.ghost{background:#fff;color:var(--accent)}
+  footer.card{font-size:14px;color:var(--muted)}
+  footer.card nav{display:flex;flex-wrap:wrap;gap:14px;margin:8px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="card">
+<span class="eyebrow">Personally operated utility</span>
+<h1>PSFC Research Backup</h1>
+<p class="muted">A personally operated research backup utility for safeguarding selected research files in the user&rsquo;s own Google Drive.</p>
+<div class="notice"><strong>Not an official MIT or PSFC service.</strong> This utility is independently operated and is not affiliated with, endorsed by, or acting on behalf of MIT or the MIT Plasma Science and Fusion Center (PSFC).</div>
+<nav class="links" aria-label="Site">
+<a class="btn primary" href="privacy.html">Read Privacy Policy</a>
+<a class="btn ghost" href="mailto:thomassendrue755@gmail.com">Contact operator</a>
+</nav>
+</header>
+
+<main class="card">
+<h2>What this utility does</h2>
+<p>PSFC Research Backup transfers and manages <strong>user-selected backups</strong> and associated metadata in the user&rsquo;s own Google Drive. It works only with files the app created or files the user explicitly opened with or shared with the app.</p>
+<ul>
+<li>Back up selected research files chosen by the user.</li>
+<li>Manage those app-associated backups and their metadata at the user&rsquo;s direction.</li>
+<li>Store backup content in the user&rsquo;s own Google Drive account, hosted by Google.</li>
+</ul>
+
+<h2>Limited Google Drive scope</h2>
+<p>The app requests the narrow <code>drive.file</code> scope:</p>
+<div class="notice">Only files created by the app, or explicitly opened with or shared with the app. It does <strong>not</strong> request access to the user&rsquo;s whole Drive.</div>
+
+<h2>What this website is</h2>
+<div class="grid">
+<div class="tile"><strong>Informational only</strong><span class="muted">This site describes the utility and its privacy practices. It does not run backups.</span></div>
+<div class="tile"><strong>No sign-in here</strong><span class="muted">This site has no OAuth callback, no sign-in, and no credential collection. It has no access to any backup host.</span></div>
+</div>
+
+<h2>How authorization works</h2>
+<p>Google authorization and backup transfers are handled by the operator&rsquo;s separate authorization and backup tools &mdash; not by these static web pages. OAuth credentials are processed by those operator tools and are never published on this site.</p>
+
+<h2>Data handling at a glance</h2>
+<ul>
+<li>Backup files and metadata live in the user&rsquo;s Google Drive under the user&rsquo;s account.</li>
+<li>Backups remain until the user deletes them.</li>
+<li>No advertising and no sale of personal information.</li>
+<li>GitHub Pages hosting may process visitor IP addresses and request logs under GitHub&rsquo;s privacy policy.</li>
+<li>No absolute security guarantees are made.</li>
+</ul>
+<p>Full details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+<h2>Managing or removing data</h2>
+<ul>
+<li>Revoke the app&rsquo;s Drive access at <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>. Revoking access does not delete existing backups.</li>
+<li>Delete backup files and empty the Drive trash yourself in Google Drive.</li>
+<li>For removal of app-managed credentials or data held by the operator, contact <a href="mailto:thomassendrue755@gmail.com">thomassendrue755@gmail.com</a>.</li>
+</ul>
+
+<h2>Contact</h2>
+<p>Operator contact for questions, access requests, or removal requests: <a href="mailto:thomassendrue755@gmail.com">thomassendrue755@gmail.com</a>.</p>
+</main>
+
+<footer class="card">
+<nav aria-label="Footer">
+<a href="index.html">Home</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="mailto:thomassendrue755@gmail.com">thomassendrue755@gmail.com</a>
+</nav>
+<p>PSFC Research Backup is a personally operated research backup utility, explicitly not an official MIT/PSFC service. This site is informational only and collects no credentials.</p>
+</footer>
+
+</div>
+</body>
+</html>
